@@ -10,8 +10,17 @@
   </head>
 
   <body>
-    <div class="<%= controller_name %>">
+
+    <header>
+      <h1><%= link_to 'Bulletin Board', :root %></h1>
+      <ul>
+        <li><%= link_to 'Home', :root %></li>
+        <li><%= link_to 'Sign Up', :signup %></li>
+        <li>Sign in</li>
+      </ul>
+    </header>
+    <main class="<%= controller_name %> <%= action_name %>">
       <%= yield %>
-    </div>
+    </main>
   </body>
 </html>

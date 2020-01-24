@@ -12,9 +12,11 @@ class OrganizationsController < ApplicationController
   def show
   end
 
-  # GET /organizations/new
   def new
     @organization = Organization.new
+    @organization.admin = User.new
+
+    render layout: 'home'
   end
 
   # GET /organizations/1/edit
@@ -25,13 +27,14 @@ class OrganizationsController < ApplicationController
   # POST /organizations.json
   def create
     @organization = Organization.new(organization_params)
+    puts @organization
 
     respond_to do |format|
       if @organization.save
-        format.html { redirect_to @organization, notice: 'Organization was successfully created.' }
+        format.html { redirect_to :root, notice: 'Organization was successfully created.' }
         format.json { render :show, status: :created, location: @organization }
       else
-        format.html { render :new }
+        format.html { render "home/signup" }
         format.json { render json: @organization.errors, status: :unprocessable_entity }
       end
     end

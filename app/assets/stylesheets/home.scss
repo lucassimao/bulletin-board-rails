@@ -2,23 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.home {
+body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
+  a {
+    cursor: pointer;
+  }
+  a,
+  a:visited {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: #4ec7db;
+  }
 
   header {
     padding: 2em 6em;
     background-color: #4ec7db;
     color: #f5f5f5;
 
-
     ul {
       li {
         display: inline;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-size: 1.2em;
         font-weight: bold;
       }
@@ -36,10 +47,13 @@
   }
 
   main {
+    flex-grow: 1;
+  }
+
+  main.index {
     background-image: url(image_path("background.jpg"));
     background-repeat: no-repeat;
     background-size: cover;
-    flex-grow: 1;
     position: relative;
 
     .jumbotron {
@@ -47,19 +61,18 @@
       top: 12em;
       right: 1em;
       max-width: 650px;
-      background-color: rgba(235, 25, 14,.5);
-      border: 1px solid rgb(235,25,14);
+      background-color: rgba(235, 25, 14, 0.5);
+      border: 1px solid rgb(235, 25, 14);
       padding: 1em;
       color: #fff;
 
-      h3{
-          line-height: 1em;
-          font-family: Arial, Helvetica, sans-serif;
-
+      h3 {
+        line-height: 1em;
+        font-family: Arial, Helvetica, sans-serif;
       }
 
       h2 {
-          margin: 1em 0;
+        margin: 1em 0;
         font-size: 5em;
         line-height: 1em;
       }
@@ -67,18 +80,16 @@
       p {
         font-size: 1.2em;
         font-family: Arial, Helvetica, sans-serif;
-
       }
 
       button {
-          border: none;
-          background-color: #4ec7db;
-          padding: .5em 2em;
-          color: #fff;
-          font-weight: bold;
-          cursor: pointer;
+        border: none;
+        background-color: #4ec7db;
+        padding: 0.5em 2em;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
       }
-
     }
   }
 }
