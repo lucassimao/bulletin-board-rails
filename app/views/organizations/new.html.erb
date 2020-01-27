@@ -1,14 +1,14 @@
 
 <div class="signup">
-    <h1>Sign Up</h1>
+    <h2>Sign Up</h2>
     <p>Please fill in this form to create an account</p>
 
     <% if @organization.errors.any? %>
         <div id="error_explanation">
-        <h2><%= pluralize(organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
+        <p><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</p>
 
         <ul>
-        <% organization.errors.full_messages.each do |message| %>
+        <% @organization.errors.each do |attr,message| %>
             <li><%= message %></li>
         <% end %>
         </ul>
@@ -35,7 +35,7 @@
             </div>    
         <% end %>    
         <div>
-            <%= form.submit %>
+            <%= form.submit 'Sign Up' %>
         </div>
     <% end %>
 </div>

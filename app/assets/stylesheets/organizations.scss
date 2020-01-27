@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.organizations.new {
+.organizations {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,12 +19,39 @@
     }
 
     h1,
-    label {
+    h2 {
       color: #000;
     }
 
     form {
       width: 500px;
+
+      input[type="submit"] {
+        background-color: #4ec7db;
+        color: #fff;
+        font-weight: bold;
+        padding: 1em 2em;
+        border: none;
+        margin-top: 1em;
+        border-radius: 0.5em;
+        font-size: 1.3em;
+        cursor: pointer;
+      }
+
+      label{
+          color: #000;
+      }
+
+      .field_with_errors label {
+        color: #f00;
+        font-weight: bold;
+      }
+
+      .field_with_errors{
+          margin-top: .5em;
+          padding: 0;
+          background-color: #fff;
+      }
     }
 
     .form-field {
@@ -41,7 +68,7 @@
 
       label {
         margin: 0.5em 0;
-        font-size: 1.5em;
+        font-size: 1.3em;
       }
     }
   }

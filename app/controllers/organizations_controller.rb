@@ -27,14 +27,14 @@ class OrganizationsController < ApplicationController
   # POST /organizations.json
   def create
     @organization = Organization.new(organization_params)
-    puts @organization
+    @organization.admin.organization_admin = true
 
     respond_to do |format|
       if @organization.save
         format.html { redirect_to :root, notice: 'Organization was successfully created.' }
         format.json { render :show, status: :created, location: @organization }
       else
-        format.html { render "home/signup" }
+        format.html { render "new",layout: 'home' }
         format.json { render json: @organization.errors, status: :unprocessable_entity }
       end
     end
@@ -72,6 +72,6 @@ class OrganizationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def organization_params
-      params.require(:organization).permit(:name, :description, :picture_url)
+      params.require(:organization).permit(:name, :description, :picture_url, {admin_attributes: [:email, :password]})
     end
 end
