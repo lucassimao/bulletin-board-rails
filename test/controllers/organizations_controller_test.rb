@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class OrganizationsControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -16,11 +16,13 @@ class OrganizationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create organization" do
-    assert_difference('Organization.count') do
-      post organizations_url, params: { organization: { description: @organization.description, name: @organization.name, picture_url: @organization.picture_url } }
+    assert_difference("Organization.count") do
+      post organizations_url, params: { organization: { description: @organization.description, name: @organization.name,
+                                                       picture_url: @organization.picture_url,
+                                                       admin_attributes: { email: "email@gmail.com", password: "123" } } }
     end
 
-    assert_redirected_to organization_url(Organization.last)
+    assert_redirected_to root_url
   end
 
   test "should show organization" do
@@ -34,12 +36,14 @@ class OrganizationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update organization" do
-    patch organization_url(@organization), params: { organization: { description: @organization.description, name: @organization.name, picture_url: @organization.picture_url } }
+    patch organization_url(@organization), params: { organization: { description: @organization.description, name: @organization.name,
+                                                                    picture_url: @organization.picture_url,
+                                                                    admin_attributes: { email: "email@gmail.com", password: "123" } } }
     assert_redirected_to organization_url(@organization)
   end
 
   test "should destroy organization" do
-    assert_difference('Organization.count', -1) do
+    assert_difference("Organization.count", -1) do
       delete organization_url(@organization)
     end
 
