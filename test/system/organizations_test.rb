@@ -2,46 +2,36 @@ require "application_system_test_case"
 
 class OrganizationsTest < ApplicationSystemTestCase
   setup do
-    @organization = organizations(:one)
   end
 
-  test "visiting the index" do
-    visit organizations_url
-    assert_selector "h1", text: "Organizations"
+  test "ensuring organization name, email and password are required" do
+    visit signup_url
+
+    click_on id: "btn-signup"
+
+    assert has_current_path?(organizations_path)
+
+    assert page.has_selector?('#error_explanation ul li', count: 3)
+    assert page.has_selector?('form .field_with_errors label', count: 3)
+
   end
 
   test "creating a Organization" do
-    visit organizations_url
-    click_on "New Organization"
+    visit signup_url
 
-    fill_in "Description", with: @organization.description
-    fill_in "Name", with: @organization.name
-    fill_in "Picture url", with: @organization.picture_url
-    click_on "Create Organization"
+    fill_in "Organization name", with: "New organization"
+    fill_in "Description", with: "Some testing organization"
+    fill_in "Email", with: "organization@gmail.com"
+    fill_in "Password", with: "123"
 
-    assert_text "Organization was successfully created"
-    click_on "Back"
-  end
+    click_on id: "btn-signup"
 
-  test "updating a Organization" do
-    visit organizations_url
-    click_on "Edit", match: :first
+    assert has_current_path?(root_path)
 
-    fill_in "Description", with: @organization.description
-    fill_in "Name", with: @organization.name
-    fill_in "Picture url", with: @organization.picture_url
-    click_on "Update Organization"
-
-    assert_text "Organization was successfully updated"
-    click_on "Back"
-  end
-
-  test "destroying a Organization" do
-    visit organizations_url
-    page.accept_confirm do
-      click_on "Destroy", match: :first
-    end
-
-    assert_text "Organization was successfully destroyed"
+    organization = Organization.last
+    assert_equal "New organization", organization.name
+    assert_equal "Some testing organization", organization.description
+    assert_equal "organization@gmail.com", organization.admin.email
+    assert organization.admin.authenticate("123")
   end
 end
