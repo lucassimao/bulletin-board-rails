@@ -3,9 +3,9 @@ class OrganizationsController < ApplicationController
 
   # GET /organizations
   # GET /organizations.json
-  def index
-    @organizations = Organization.all
-  end
+#   def index
+#     @organization = Organization.get(session[:organization_id])
+#   end
 
   # GET /organizations/1
   # GET /organizations/1.json

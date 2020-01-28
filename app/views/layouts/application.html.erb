@@ -10,8 +10,24 @@
   </head>
 
   <body>
-    <div class="<%= controller_name %>">
+    <header>
+      <h1><%= link_to 'Bulletin Board', :organization %></h1>
+      <ul>
+        <li><%= link_to 'Messages', :root %></li>
+        <li><%= link_to 'Users', :root %></li>
+        <li><%= link_to 'Roles', :root %></li>
+        <li><%= link_to 'Groups', :root %></li>
+        <li class="menu-item-profile">
+          <img src="https://via.placeholder.com/50" class="profile_image" >
+          <div class="profile-options">
+              <p> <%= @organization.name %> </p>
+            <%= link_to 'Profile', :edit_organization %> 
+          </div>
+        </li>
+      </ul>
+    </header>
+    <main class="<%= controller_name %>">
       <%= yield %>
-    </div>
+    </main>
   </body>
 </html>
