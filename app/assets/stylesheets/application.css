@@ -23,6 +23,11 @@ html {
   box-sizing: inherit;
 }
 
+p{
+    margin: 0;
+    padding: 0;
+}
+
 header {
   padding: 2em 6em;
   background-color: #4ec7db;
@@ -48,11 +53,10 @@ header ul li {
 }
 
 header ul li:not(:last-child) {
-  margin-right: 1em;
+  margin-right: 2em;
 }
 
 header .menu-item-profile{
-    border: 1px solid red;
     display: inline-flex;
 }
 
@@ -64,6 +68,7 @@ header .menu-item-profile .profile-options{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 body {

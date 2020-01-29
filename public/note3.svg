@@ -1,0 +1,25 @@
+<?xml version="1.0"?><svg width="744.09448" height="524.40942" xmlns="http://www.w3.org/2000/svg">
+ <title>a nap gondolata sticky</title>
+ <defs>
+  <filter id="filter4153">
+   <feGaussianBlur stdDeviation="81.084917" id="feGaussianBlur4155"/>
+  </filter>
+ </defs>
+ <metadata id="metadata7">image/svg+xml</metadata>
+ <g>
+  <title>Layer 1</title>
+  <g transform="rotate(11.7211 375.486 258.886)" id="layer1">
+   <rect id="rect3152" width="5602.9243" height="3419.2888" x="-2512.4524" y="56.33197" transform="matrix(0.110466, -0.0237349, 0.0221633, 0.103151, 300.373, 92.3457)" filter="url(#filter4153)" stroke-dashoffset="0" stroke-miterlimit="4" stroke-width="0.1" fill-rule="nonzero" fill="#c8c4b7"/>
+   <rect transform="matrix(0.110466, -0.0237349, 0.0221633, 0.103151, 308.468, 74.8207)" y="56.33197" x="-2512.4524" height="3419.2888" width="5602.9243" id="rect3162" stroke-dashoffset="0" stroke-miterlimit="4" stroke-width="0.1" fill-rule="nonzero" fill="#ffe680"/>
+   <g id="g3154" transform="matrix(0.346288, 0, 0, 0.346288, 227.095, -36.0506)">
+    <path id="path4171" d="m474.749512,444.365082a155.347443,146.481125 0 1 1 -310.694916,56.781433a155.347443,146.481125 0 1 1 310.694916,-56.781433z" stroke-dashoffset="0" stroke-miterlimit="4" stroke-width="0.080493" fill-rule="nonzero" fill="#ecca3e"/>
+    <path d="m500.787537,413.397369a155.347443,146.481125 0 1 1 -310.694946,56.781433a155.347443,146.481125 0 1 1 310.694946,-56.781433z" id="path2164" stroke-dashoffset="0" stroke-miterlimit="4" stroke-width="0.080493" fill-rule="nonzero" fill="#d40000"/>
+    <path id="path2179" d="m509.34375,405.875l-152.09375,27.8125l-31.84375,143.875c17.671814,2.692627 36.123322,2.733765 54.84375,-0.6875c84.378632,-15.420654 141.36438,-91.531921 129.09375,-171z" stroke-dashoffset="0" stroke-miterlimit="4" stroke-width="0.1" fill-rule="nonzero" fill="#ee0000"/>
+    <path id="path2162" d="m358.5625,281.15625c-10.466522,-0.104706 -21.124756,0.791046 -31.84375,2.75c-85.751892,15.671631 -143.339737,94.017609 -128.5625,174.875c11.551239,63.205505 63.973328,109.139954 127.25,118.78125l31.84375,-143.875l152.09375,-27.8125c-0.199707,-1.293335 -0.263336,-2.580139 -0.5,-3.875c-12.930084,-70.750214 -77.015533,-120.110809 -150.28125,-120.84375z" stroke-dashoffset="0" stroke-miterlimit="4" stroke-width="0.1" fill-rule="nonzero" fill="#ff0000"/>
+    <path id="path2166" d="m294.210693,361.944214l-11.417023,8.440613l-21.05954,15.748627c-8.597076,18.274963 -7.398224,37.665436 -2.016541,58.264282c13.962097,53.440887 53.708771,79.563507 109.792297,73.191864c28.708588,-3.261658 55.008423,-12.916138 71.137085,-33.430023l29.248138,-36.676605l-175.684418,-85.538757z" stroke-dashoffset="0" stroke-miterlimit="4" stroke-width="0.1" fill-rule="nonzero" fill="#aa0000"/>
+    <path d="m507.851807,349.003662a121.423531,114.492416 0 1 1 -242.847076,44.381927a121.423531,114.492416 0 1 1 242.847076,-44.381927z" id="path2160" stroke-dashoffset="0" stroke-miterlimit="4" stroke-width="0.102982" fill-rule="nonzero" fill="#d40000"/>
+    <path id="path2174" d="m516.559082,341.042572a121.423531,114.492416 0 1 1 -242.847076,44.381927a121.423531,114.492416 0 1 1 242.847076,-44.381927z" stroke-dashoffset="0" stroke-miterlimit="4" stroke-width="0.102982" fill-rule="nonzero" fill="#ff0000"/>
+   </g>
+  </g>
+ </g>
+</svg>

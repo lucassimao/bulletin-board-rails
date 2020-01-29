@@ -9,6 +9,43 @@
   align-items: center;
   background-color: #f5f5f5;
 
+  .welcome {
+      width: 800px;
+      margin: 2em 1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      h4 {
+          margin-top: 1em;
+      }
+      .btn-new-message{
+          color: #000;
+          border: 2px solid #000;
+          font-weight: bold;
+          padding: 1em 2em;
+          background-color: #ffff59;
+          box-shadow: 5px 5px 1px 1px rgba(0, 0, 255, .2);
+
+      }
+  }
+
+  .message-board {
+    background-color: #fff;
+    width: 800px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 1em;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    margin-bottom: 5em;
+
+    .message a {
+      color: #000;
+      margin-left: 1em;
+    }
+  }
+
   .signup {
     background-color: #fff;
     padding: 2.5em 2em;
@@ -38,8 +75,8 @@
         cursor: pointer;
       }
 
-      label{
-          color: #000;
+      label {
+        color: #000;
       }
 
       .field_with_errors label {
@@ -47,10 +84,10 @@
         font-weight: bold;
       }
 
-      .field_with_errors{
-          margin-top: .5em;
-          padding: 0;
-          background-color: #fff;
+      .field_with_errors {
+        margin-top: 0.5em;
+        padding: 0;
+        background-color: #fff;
       }
     }
 

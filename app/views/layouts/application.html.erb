@@ -11,19 +11,19 @@
 
   <body>
     <header>
-      <h1><%= link_to 'Bulletin Board', :organization %></h1>
+      <h1><%= link_to 'Bulletin Board', :root %></h1>
       <ul>
-        <li><%= link_to 'Messages', :root %></li>
-        <li><%= link_to 'Users', :root %></li>
-        <li><%= link_to 'Roles', :root %></li>
-        <li><%= link_to 'Groups', :root %></li>
+        <li><%= link_to '', :root, class: 'fas fa-envelope-open-text fa-2x', title: 'Messages' %></li>
+        <% if @current_user.super_admin? or @current_user.organization_admin? %>
+            <li><%= link_to '', :root, class: 'fas fa-user-plus fa-2x', title: 'Users' %></li>
+            <li><%= link_to '', :root, class: 'fas fa-users fa-2x', title: 'Roles' %></li>
+        <% end %>
+
         <li class="menu-item-profile">
           <img src="https://via.placeholder.com/50" class="profile_image" >
-          <div class="profile-options">
-              <p> <%= @organization.name %> </p>
-            <%= link_to 'Profile', :edit_organization %> 
-          </div>
         </li>
+        <li><%= link_to '', signout_path, title: 'Sign out', class: 'fas fa-sign-out-alt fa-2x' %></li>
+
       </ul>
     </header>
     <main class="<%= controller_name %>">
