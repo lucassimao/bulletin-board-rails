@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  has_secure_password validations: false
-  validates :password, presence: { message: "Password can't be blank" }
-  validates :email, presence: { message: "Email can't be blank" }, uniqueness: { message: "The email has already been taken" }
+  has_secure_password 
+  validates :email, presence: { message: "Email can't be blank"}
+  validates :email,  uniqueness: { message: "The email has already been taken" }, on: :create
   serialize :profiles, Array
 
   private
