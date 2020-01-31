@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
     protected
     def authorize
-        @current_user = Organization.find(3).admin
+        @current_user = Organization.find_by_name('Test organization').admin
     end
 
 

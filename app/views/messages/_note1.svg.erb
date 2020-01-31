@@ -17,8 +17,9 @@
          <text font-size="30" id="caption" x="45%" y="10%" dominant-baseline="middle" text-anchor="middle">
                 <% 
                     i = 0
-                    while i < message.size do
-                        substr = message.slice(i,21)
+                    text = message.text.slice(0,160)
+                    while i < text.size do
+                        substr = text.slice(i,21)
                         i += 21
                 %>
                     <tspan x="45%" dy="40"><%= substr %></tspan>

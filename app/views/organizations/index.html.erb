@@ -11,7 +11,7 @@
 <div class="message-board">
     <% @messages.each do |msg| %>
         <div class="message">
-            <%= render partial: 'messages/note1.svg', locals: {message: msg.slice(0,160)} %>
+            <%= render partial: 'messages/note1.svg', locals: {message: msg} %>
             <p><%= link_to 'Mark as read', :root %></p>
         </div>
     <% end %>

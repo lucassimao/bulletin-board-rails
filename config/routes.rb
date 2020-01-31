@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+#   resources :messages
+#   resources :roles
   root "home#index"
   
   get 'signout', to: 'home#signout'

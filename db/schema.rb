@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_24_173341) do
+ActiveRecord::Schema.define(version: 2020_01_31_192540) do
+
+  create_table "messages", force: :cascade do |t|
+    t.text "text"
+    t.integer "author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_messages_on_author_id"
+  end
 
   create_table "organizations", force: :cascade do |t|
     t.string "name"
@@ -22,6 +30,23 @@ ActiveRecord::Schema.define(version: 2020_01_24_173341) do
     t.index ["admin_id"], name: "index_organizations_on_admin_id"
   end
 
+  create_table "roles", force: :cascade do |t|
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "organization_id"
+    t.index ["organization_id"], name: "index_roles_on_organization_id"
+  end
+
+  create_table "user_roles", force: :cascade do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["role_id"], name: "index_user_roles_on_role_id"
+    t.index ["user_id"], name: "index_user_roles_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.text "profiles"
     t.string "email"
@@ -29,6 +54,19 @@ ActiveRecord::Schema.define(version: 2020_01_24_173341) do
     t.string "picture_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "organization_id"
+    t.index ["organization_id"], name: "index_users_on_organization_id"
+  end
+
+  create_table "visibilities", force: :cascade do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+    t.integer "message_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["message_id"], name: "index_visibilities_on_message_id"
+    t.index ["role_id"], name: "index_visibilities_on_role_id"
+    t.index ["user_id"], name: "index_visibilities_on_user_id"
   end
 
 end
