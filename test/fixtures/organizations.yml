@@ -1,11 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyText
-  picture_url: MyString
+  name: Organization for tests
+  description: Description for organization data
+  admin: organization_admin
 
-two:
-  name: MyString
-  description: MyText
-  picture_url: MyString
+two: 
+    name: Foo organization
+    description: a second organization

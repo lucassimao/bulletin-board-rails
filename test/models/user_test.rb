@@ -48,4 +48,19 @@ class UserTest < ActiveSupport::TestCase
     assert_includes User.find(u.id).profiles, "user"
     assert_includes User.find(u.id).profiles, "organization_admin"
   end
+
+  test "User organization_admin should have 2 roles" do
+    roles = users(:organization_admin).user_roles.map { |ur| ur.role }
+    roles.each do |role|
+      assert_includes roles(:role_hr_users, :role_financial_users), role
+    end
+  end
+
+  test "All users, but organization_admin, should have a single role" do
+    organization = organizations(:one)
+    assert_equal roles(:role_hr_users), users(:rhuser).user_roles[0].role
+    assert_equal roles(:role_financial_users), users(:accountant_user).user_roles[0].role
+    assert_equal roles(:role_marketing), users(:marketing_user).user_roles[0].role
+
+  end
 end

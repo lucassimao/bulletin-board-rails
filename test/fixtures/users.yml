@@ -1,13 +1,32 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  profiles: MyText
-  email: MyString
+organization_admin:
+  profiles: ["organization_admin"]
+  email: admin@organization.com
   password_digest: <%= BCrypt::Password.create('secret') %>
-  picture_url: MyString
+  organization: one
 
-two:
-  profiles: MyText
-  email: MyString
+rhuser:
+  profiles: ["user"]
+  email: user@organization.com
   password_digest: <%= BCrypt::Password.create('secret') %>
-  picture_url: MyString
+  organization: one
+
+accountant_user:
+    profiles: ["user"]
+    email: accountant-user@organization.com
+    password_digest: <%= BCrypt::Password.create('secret') %>
+    organization: one
+  
+marketing_user:
+    profiles: ["user"]
+    email: marketing-user@organization.com
+    password_digest: <%= BCrypt::Password.create('secret') %>    
+    organization: one
+
+secretary:
+    profiles: ["user"]
+    email: secretary-user@organization.com
+    password_digest: <%= BCrypt::Password.create('secret') %>    
+    organization: one
+

@@ -1,9 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  role: one
-  user: one
+  role: role_hr_users
+  user: organization_admin
 
 two:
-  role: two
-  user: two
+  role: role_financial_users
+  user: organization_admin
+
+three:
+  role: role_hr_users
+  user: rhuser
+
+four:
+    role: role_financial_users
+    user: accountant_user
+
+five:
+    role: role_marketing
+    user: marketing_user

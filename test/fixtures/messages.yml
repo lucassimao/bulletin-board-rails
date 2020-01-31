@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  text: MyText
-  author: one
+tax_update_msg:
+  text: Please update the tax values
+  author: organization_admin
 
-two:
-  text: MyText
-  author: two
+meeting_msg:
+  text: Please, remember the meeting monday morning
+  author: organization_admin
+
+be_on_time_msg:
+    text: Please, monday morning be in the office on time
+    author: organization_admin  

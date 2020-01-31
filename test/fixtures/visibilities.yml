@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  role: one
-  message: one
+  role: role_financial_users
+  message: tax_update_msg
 
 two:
-  role: two
-  message: two
+  role: role_hr_users
+  message: meeting_msg
+
+three:
+    user: secretary
+    message: be_on_time_msg

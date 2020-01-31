@@ -1,7 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  description: MyString
+role_hr_users:
+  description: For human resources people
+  organization: one
 
-two:
-  description: MyString
+role_financial_users:
+  description: for financial folks
+  organization: one
+
+
+role_marketing:
+    description: marketing people
+    organization: one
+
